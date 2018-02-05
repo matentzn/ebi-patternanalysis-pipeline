@@ -33,4 +33,4 @@ COPY run.sh ${WORKSPACE}/run.sh
 
 RUN chmod +x ${WORKSPACE}/run.sh
 
-ENTRYPOINT [${WORKSPACE}"/run.sh"]
+ENTRYPOINT ["/opt/pattern_pipeline/run.sh"]
