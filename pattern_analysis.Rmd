@@ -1,0 +1,25 @@
+---
+title: "Phenotype Analysis"
+author: "Nicolas Matentzoglu"
+date: "12/01/2018"
+output: html_document
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(knitr)
+
+entity_count_file<-paste("entitycounts.csv",sep="");
+pattern_file<-paste("pattern_metadata.csv",sep="");
+```
+
+```{r}
+df_ec<-read.csv(entity_count_file)
+#df_p<-read.csv(pattern_file)
+
+df_ec<-df_ec[order(-df_ec$mentioned),]
+kable(head(df_ec,20),row.names = FALSE)
+```

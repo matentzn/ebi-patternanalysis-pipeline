@@ -2,6 +2,8 @@ FROM maven:3-jdk-8
 
 ENV WORKSPACE=/opt/pattern_pipeline
 ENV DATA=/data
+ENV CORPUS=${DATA}/corpus
+ENV DATAOUT=${DATA}/out
 
 ENV JAVA_OPTS='-Xmx20g -Xms12g'
 
@@ -30,6 +32,7 @@ rm -r ${WORKSPACE}/corpusdebugger && \
 rm -r ${WORKSPACE}/ontologyinferenceanalysis
 
 COPY run.sh ${WORKSPACE}/run.sh
+COPY pattern_analysis.Rmd ${WORKSPACE}/pattern_analysis.Rmd
 
 RUN chmod +x ${WORKSPACE}/run.sh
 
