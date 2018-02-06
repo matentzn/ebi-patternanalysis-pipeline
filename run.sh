@@ -4,7 +4,7 @@ cd ${WORKSPACE}/
 ls -l
 
 echo '** running corpus debugger against corpus **'
-java ${JAVA_OPTS} -jar corpusdebugger.jar ${CORPUS} i 1 2 ${DATAOUT}
+java ${JAVA_OPTS} -jar corpusdebugger.jar ${CORPUS} elk i 1 2 ${DATAOUT}
 
 echo '** running inference analysis against corpus **'
 #echo "Excluded due to memory requirements"
