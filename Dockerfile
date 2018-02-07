@@ -5,8 +5,6 @@ ENV DATA=/data
 ENV CORPUS=${DATA}/corpus
 ENV DATAOUT=${DATA}/out
 
-ENV JAVA_OPTS='-Xmx20g -Xms12g'
-
 VOLUME ${DATA}
 
 RUN echo Building Pattern Analysis Pipeline && \
