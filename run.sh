@@ -4,6 +4,7 @@ java_params=$@
 
 cd ${WORKSPACE}/
 ls -l
+echo "Running with Java Paramaters: "$java_params
 
 echo '** running corpus debugger against corpus **'
 java $java_params -jar corpusdebugger.jar ${CORPUS} i 1 2 elk ${DATAOUT}
