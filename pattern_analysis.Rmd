@@ -18,8 +18,11 @@ pattern_file<-paste("pattern_metadata.csv",sep="");
 
 ```{r}
 df_ec<-read.csv(entity_count_file)
-#df_p<-read.csv(pattern_file)
+df_p<-read.csv(pattern_file)
 
 df_ec<-df_ec[order(-df_ec$mentioned),]
+df_p<-df_p[order(-df_p$m1_union),]
+
 kable(head(df_ec,20),row.names = FALSE)
+kable(head(df_p),row.names = FALSE)
 ```
